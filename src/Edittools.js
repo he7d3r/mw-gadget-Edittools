@@ -1,3 +1,9 @@
+/**
+ * Allow customization of edittools
+ * @source: [[wikt:en:User:Conrad.Irwin/edittools.js]] and [[wikt:en:MediaWiki:Commons.js]] (cookies)
+ * @traking: [[Special:GlobalUsage/User:Helder.wiki/Tools/Edittools.js]] ([[File:User:Helder.wiki/Tools/Edittools.js]])
+ */
+
 function setCookie(cookieName, cookieValue) {
  var today = new Date();
  var expire = new Date();
@@ -67,6 +73,49 @@ function extractText(el){
     }
     return output;
 }
+/**
+ * Faz com que as fórmulas em LaTeX sejam clicáveis
+**/
+function wet_LaTeX(el){
+	imgs = el.getElementsByTagName('img')
+	if(imgs.length>0){
+		var prox = document.getElementById('edittools-select')
+		if (prox){
+			prox = prox.nextSibling
+			var div = prox.parentNode
+			var math = document.createElement('input')
+			math.type = 'checkbox'
+			math.id = 'edittools-math'
+			math.name = 'edittools-math'
+			div.insertBefore(math, prox)
+
+			var lab = document.createElement('label')
+			lab.innerHTML = 'Incluir <tt>&lt;math&gt;&lt;/math&gt;</tt> em volta das fórmulas.<br />'
+			lab.setAttribute('for','edittools-math')
+			div.insertBefore(lab, prox)
+		}
+	}
+	for (i=0; i<imgs.length; i++){
+		if (!hasClass(imgs[i], 'tex')) continue
+		imgs[i].onclick = function() {
+			var tag = this.alt.split('\\Box', 2)
+			var c = document.getElementById('edittools-math')
+			var m0 = '', m1 = ''
+			if (c && c.checked) {
+				m0 = '<math>'
+				m1 = '</math>'
+			}
+			if (1 < tag.length)
+				insertTags(m0 + tag[0], tag[1] + m1, 'X')
+			else if (1 == tag.length)
+				insertTags(m0 + tag[0] + m1,'', '')
+			else
+				insertTags(m0 + '\Box' + m1, '', '')
+			return false
+		}
+	}
+}
+
 var wet = {}; //Wiktionary Edit Tools global object
 /**
  * wet_init starts the process of sorting the edittools, should be called every
@@ -119,6 +168,7 @@ function wet_user_ajax(resText){
             }
         }
     }
+    wet_LaTeX(div)
     wet_select_first()
 }
 function wet_getset_ajax(resText,which){
