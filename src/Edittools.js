@@ -1,7 +1,7 @@
 /**
  * Allow customization of edittools
  * @source: [[wikt:en:User:Conrad.Irwin/edittools.js]] and [[wikt:en:MediaWiki:Commons.js]] (cookies)
- * @traking: [[Special:GlobalUsage/User:Helder.wiki/Tools/Edittools.js]] ([[File:User:Helder.wiki/Tools/Edittools.js]])
+ * @tracking: [[Special:GlobalUsage/User:Helder.wiki/Tools/Edittools.js]] ([[File:User:Helder.wiki/Tools/Edittools.js]])
  */
 
 function setCookie(cookieName, cookieValue) {
