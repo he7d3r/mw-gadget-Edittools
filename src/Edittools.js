@@ -55,7 +55,7 @@ function deleteCookie(cookieName) {
 **/
 function startAjaxGet(url,onsuccess,argument){
     /*jshint camelcase: false */
-    var req = sajax_init_object();
+    var req = sajax_init_object(); /* FIXME */
     /*jshint camelcase: true */
     if(!req) {return false;}
     req.onreadystatechange=function(){
