@@ -1,6 +1,7 @@
 /**
  * Allow customization of edittools
- * @author: [[User:Helder.wiki]]
+ * @author: Helder (https://github.com/he7d3r)
+ * @license: CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0/>
  * @author: [[wikt:en:User:Conrad.Irwin]]
  * @source: [[wikt:en:User:Conrad.Irwin/edittools.js]] and [[wikt:en:MediaWiki:Commons.js]] (cookies)
  * @tracking: [[Special:GlobalUsage/User:Helder.wiki/Tools/Edittools.js]] ([[File:User:Helder.wiki/Tools/Edittools.js]])
