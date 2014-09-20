@@ -4,7 +4,6 @@
  * @license: CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0/>
  * @author: [[wikt:en:User:Conrad.Irwin]]
  * @source: [[wikt:en:User:Conrad.Irwin/edittools.js]] and [[wikt:en:MediaWiki:Commons.js]] (cookies)
- * @tracking: [[Special:GlobalUsage/User:Helder.wiki/Tools/Edittools.js]] ([[File:User:Helder.wiki/Tools/Edittools.js]])
  */
 /*jshint browser: true, devel: true, camelcase: true, curly: true, eqeqeq: true, immed: true, latedef: true, newcap: true, noarg: true, noempty: true, nonew: true, quotmark: true, undef: true, unused: true, strict: true, trailing: true, maxlen: 120, evil: true, onevar: true */
 /*global jQuery, mediaWiki, sajax_init_object, escape, unescape */
