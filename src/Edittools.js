@@ -5,8 +5,6 @@
  * @author: [[wikt:en:User:Conrad.Irwin]]
  * @source: [[wikt:en:User:Conrad.Irwin/edittools.js]] and [[wikt:en:MediaWiki:Commons.js]] (cookies)
  */
-/*jshint browser: true, devel: true, camelcase: true, curly: true, eqeqeq: true, immed: true, latedef: true, newcap: true, noarg: true, noempty: true, nonew: true, quotmark: true, undef: true, unused: true, strict: true, trailing: true, maxlen: 120, evil: true, onevar: true */
-/*global jQuery, mediaWiki, sajax_init_object, escape, unescape */
 ( function ( mw, $ ) {
 'use strict';
 
@@ -54,9 +52,9 @@ function deleteCookie(cookieName) {
  *  should be in a library somewhere
 **/
 function startAjaxGet(url,onsuccess,argument){
-    /*jshint camelcase: false */
+    /*jshint camelcase:false */
     var req = sajax_init_object(); /* FIXME */
-    /*jshint camelcase: true */
+    /*jshint camelcase:true */
     if(!req) {return false;}
     req.onreadystatechange=function(){
         if( req.readyState === 4 ){
