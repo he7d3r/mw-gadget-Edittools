@@ -252,7 +252,7 @@
 	wetSelectSet(index);
 	}
 	if ( mw.config.get( 'wgAction' ) === 'edit' ) {
-	mw.loader.using( 'mediawiki.action.edit', function () {
+	mw.loader.using( 'mediawiki.toolbar', function () {
 		$(wetInit);
 	} );
 	}
