@@ -251,10 +251,8 @@
 	if (isNaN(index)) {index = 0;}
 	wetSelectSet(index);
 	}
-	if ( mw.config.get( 'wgAction' ) === 'edit' ) {
-	mw.loader.using( 'mediawiki.toolbar', function () {
-		$(wetInit);
-	} );
+	if ( mw.toolbar ) {
+		$( wetInit );
 	}
 	window.addCharSubsetMenu = function () {return false;};//Turn off current edittools
 
