@@ -58,7 +58,7 @@
 	req.onreadystatechange = function () {
 		if ( req.readyState === 4 ) {
 		if ( req.status === 200 ) {
-			if ($.isFunction(onsuccess)) { onsuccess(req.responseText, argument); }
+			if (typeof onsuccess === 'function') { onsuccess(req.responseText, argument); }
 		}
 		}
 	};
